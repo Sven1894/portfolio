@@ -29,6 +29,7 @@ body {
   .topnav a.active {
     background-color: #044caa;
     color: white;
+
   }
 
   *, *:before, *:after {
@@ -81,3 +82,7 @@ body {
   margin-right: auto;
   width: 50%;
   }
+
+      
+  }
+
