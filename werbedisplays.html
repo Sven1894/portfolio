@@ -1,21 +1,91 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Werbedisplays</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="topnav">
-        <a  href="/portfolio">About Me</a>
+        <a href="/portfolio">About Me</a>
         <a class="active" href="/portfolio/werbedisplays.html">Werbedisplays</a>
         <a href="/portfolio/werbedisplaydashboard.html">Werbedisplay - Dashboard</a>
         <a href="/portfolio/wassermelder.html">Wassermelder</a>
         <a href="digitalepinnwand.html">Digitale Pinnwand</a>
         <a href="/portfolio/quiz.html">Quiz</a>
         <a href="/portfolio/uploadseite.html">Uploadseite</a>
-   </div>
-    <h1>Werbedisplays</h1>
+    </div>
+    <div class="about-section">
+        <h1>Werbedisplays</h1>
+        <p>Erstellung eines Anzeigesystems für Werbedisplays</p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="container" style="height: 250px;">
+                    <h2>Problem</h2>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                        justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                        ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container" style="height: 250px;">
+                    <h2>Ziel</h2>
+                    <p>Lorem ipsum dolor d tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                        takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                        erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                        kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container" style="height: 250px;">
+                    <h2>Programmiersprachen / Techniken</h2>
+                    <p>JavaScript, CSS, HTML</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="slideshowtitle">Bilder</h2>
+
+    <div class="slideshow">
+        <img class="mySlides" src="imgs/werbedisplayscreen.png">
+        <img class="mySlides" src="imgs/geschaeftsstelle-gag.jpg">
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) { slideIndex = 1 }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 3500);
+        }
+    </script>
 </body>
+
 </html>
