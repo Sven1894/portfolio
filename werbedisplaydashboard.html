@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Werbedisplays - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="/portfolio">About Me</a>
+        <a href="/portfolio/werbedisplays.html">Werbedisplays</a>
+        <a class="active" href="/portfolio/werbedisplaydashboard.html">Werbedisplay - Dashboard</a>
+        <a href="/portfolio/wassermelder.html">Wassermelder</a>
+        <a href="digitalepinnwand.html">Digitale Pinnwand</a>
+        <a href="/portfolio/quiz.html">Quiz</a>
+        <a href="/portfolio/uploadseite.html">Uploadseite</a>
+    </div>
+    <div class="about-section">
+        <h1>Werbedisplay - Dashboard</h1>
+        <p>Das Abschlussprojekt meiner Ausbildung</p>
+        <p>Die Erstellung eines Dashboardes zur Steuerung der Inhalte auf dem Werbedisplay</p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="container" style="min-height: 310px;">
+                    <h2>Problem</h2>
+                    <p>Für die Inhalte auf dem Werbedisplay ist die Marketingabteilung zuständig. Wenn dem Display neue Inhalte hinzugefügt, 
+                        oder bestehende Inhalte geändert werden sollen, muss sich das Marketing an die IT-Abteilung wenden. Um die Inhalte zu ändern 
+                        müssen Dateien auf einen Server gelegt und ggf. Quellcode vom Anzeigesystem angepasst werden.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container" style="min-height: 310px;">
+                    <h2>Ziel / Lösung</h2>
+                    <p>Mit dem Dashboard kann die Marketingabteilung eigenständig, ohne Umweg über die IT, die Inhalte auf den Werbedisplays anpassen.
+                       Es können Texte und Bilder hinzugefügt und wieder entfernt werden. Damit nur bestimmte Personen Zugriff auf das Dashboard haben, wird 
+                       beim Aufruf der Seite nach einem Benutzernamen und Passwort gefragt. Nur wenn man die Zugangsdaten korrekt eingibt, kommt man auf das Dashboard. 
+                       Dies wird mit einer Access-List im Nginx Proxy Manager realisiert. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container" style="min-height: 310px;">
+                    <h2>Programmiersprachen / Techniken</h2>
+                    <p>HTML, CSS, PHP</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="slideshowtitle">Bilder</h2>
+
+    <div class="slideshow">
+        <img class="mySlides" src="imgs/fertigeSeite.png">
+        <img class="mySlides" src="imgs/bild_entfernen_auswählen.png">
+        <img class="mySlides" src="imgs/passwortabfrage.png">
+        <img class="mySlides" src="imgs/werbedisplayscreen.png">
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) { slideIndex = 1 }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 3500);
+        }
+    </script>
+</body>
+
+</html>
