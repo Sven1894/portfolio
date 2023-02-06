@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploadseite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="/portfolio">About Me</a>
+        <a href="/portfolio/werbedisplays.html">Werbedisplays</a>
+        <a href="/portfolio/werbedisplaydashboard.html">Werbedisplay - Dashboard</a>
+        <a href="/portfolio/wassermelder.html">Wassermelder</a>
+        <a href="digitalepinnwand.html">Digitale Pinnwand</a>
+        <a href="/portfolio/quiz.html">Quiz</a>
+        <a class="active" href="/portfolio/uploadseite.html">Uploadseite</a>
+    </div>
+    <div class="about-section">
+        <h1>Uploadseite</h1>
+        <p>Erstellung einer Uploadseite zur Einpflegung des Speiseplans</p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="container" style="min-height: 320px;">
+                    <h2>Problem</h2>
+                    <p>In der Betriebskantine werden auf einem Display der aktuelle Speiseplan und Werbefolien angezeigt. Der Speiseplan für
+                       die nächste Woche kommt immer per E-Mail in das IT-Gruppenpostfach. Ursprünglich musste man, damit der neue Speiseplan 
+                       und die Werbefolien auf das Display kommen, die PDF-Dateien von Hand in ein JPG umwandeln, die Dateien auf einen Server 
+                       legen und die Dateinamen im Quellcode ändern. Dieser Vorgang soll vereinfacht werden.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container" style="min-height: 320px;">
+                    <h2>Ziel / Lösung</h2>
+                    <p>Mit der Uploadseite kann man die PDF-Datei auf den Server hochladen und muss sich um nichts Weiteres mehr kümmern. Sie wird 
+                       automatisch zu einem JPG umgewandelt und in den richtigen Ordner verschoben. Der alte Speiseplan wird automatisch am Ende der 
+                       Woche durch den neuen ersetzt. Jeder hochgeladenen Speiseplan wird mit Dateiname und Kalenderwoche, für die der Speiseplan gilt, 
+                       in einer Datenbank gespeichert. Dadurch kann man auch mehrere Speisepläne für die kommende Wochen planen. Ein Bash-Skript, das 
+                       per Cronjob regelmäßig ausgeführt wird, sucht aus der Datenbank den Dateinamen, des neuen Speiseplans, der angezeigt werden soll, 
+                       raus und verschiebt den Speiseplan ins Zielverzeichnis. Bei den Werbefolien wird es genauso gemacht. Hier kann man aber zusätzlich 
+                       noch das Start- und das Enddatum der Werbefolien angeben. Das Bashskript bringt am Startdatum die Werbefolie automatisch auf das Display 
+                       und entfernt sie am Enddatum automatisch wieder.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container" style="min-height: 320px;">
+                    <h2>Programmiersprachen / Techniken</h2>
+                    <p>HTML, CSS, PHP, Bash, SQL</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="slideshowtitle">Bilder</h2>
+
+    <div class="slideshow">
+        <img class="mySlides" src="imgs/speiseplan_upload.png" style="border: 2px solid black;">
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) { slideIndex = 1 }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 3500);
+        }
+    </script>
+</body>
+
+</html>
