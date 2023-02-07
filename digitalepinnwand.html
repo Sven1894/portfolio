@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitale Pinnwand</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="imageslider.js"></script>
 </head>
 
 <body>
@@ -26,7 +31,7 @@
     <div class="row">
         <div class="column">
             <div class="card">
-                <div class="container" style="min-height: 320px;">
+                <div class="container" style="min-height: 350px;">
                     <h2>Problem</h2>
                     <p>Eine digitale Pinnwand für die IT-Abteilung soll erstellt werden, damit jeder einen Überblick über die aktuellen Aufgaben und anstehende Termine hat.</p>
                 </div>
@@ -35,7 +40,7 @@
 
         <div class="column">
             <div class="card">
-                <div class="container" style="min-height: 320px;">
+                <div class="container" style="min-height: 350px;">
                     <h2>Ziel / Lösung</h2>
                     <p>Die digitale Pinnwand beruht, wie auch das Anzeigensystem für die Werbedisplays, auf dem Open-Source-Projekt <a href="https://magicmirror.builders/" target="_blank">MagicMirror<sup>2</sup></a>.
                         Mit dem Modul "MMM-Memo" habe ich der digitalen Pinnwand für jeden Kollegen und jede Kollegin je einen Notizzettel hinzugefügt. Darauf können Aufgaben für die jeweilige Person eingetragen
@@ -48,37 +53,25 @@
 
         <div class="column">
             <div class="card">
-                <div class="container" style="min-height: 320px;">
+                <div class="container" style="min-height: 350px;">
                     <h2>Programmiersprachen / Techniken</h2>
                     <p>HTML, CSS, JavaScript</p>
                 </div>
             </div>
         </div>
     </div>
+    <br>
 
     <h2 class="slideshowtitle">Bilder</h2>
 
-    <div class="slideshow">
-        <img class="mySlides" src="imgs/digipinnwand.png">
-        <img class="mySlides" src="imgs/pinnwand-dashboard.png">
-    </div>
-
-    <script>
-        var slideIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) { slideIndex = 1 }
-            x[slideIndex - 1].style.display = "block";
-            setTimeout(carousel, 3500);
-        }
-    </script>
+    <div class="slider">
+        <div class="slide">
+          <img src="imgs/digipinnwand.png" />
+        </div>
+        <div class="slide">
+          <img src="imgs/pinnwand-dashboard.png" />
+        </div>
+      </div>
 </body>
 
 </html>

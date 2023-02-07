@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="imageslider.js"></script>
 </head>
 
 <body>
@@ -26,7 +31,7 @@
     <div class="row">
         <div class="column">
             <div class="card">
-                <div class="container" style="min-height: 320px;">
+                <div class="container" style="min-height: 350px;">
                     <h2>Problem</h2>
                     <p>Als Azubiprojekt sollten die Azubis, in meinem Ausbildungsbetrieb, einen Messeauftritt auf einer Ausbildungsmesse planen und durchführen. 
                        Meine Aufgabe war es, ein Quiz, das die Messebesucher spielen können, zu programmieren.</p>
@@ -36,7 +41,7 @@
 
         <div class="column">
             <div class="card">
-                <div class="container" style="min-height: 320px;">
+                <div class="container" style="min-height: 350px;">
                     <h2>Ziel / Lösung</h2>
                     <p>Das Quiz kann man entweder alleine oder gegen einen anderen Spieler spielen. Es stehen verschiedene Kategorien zur Auswahl, von denen jeweils 
                        drei Fragen gestellt werden. Spielt man alleine, geht es darum, so viele Fragen wie möglich richtig zu beantworten. Spielt man gegen einen anderen 
@@ -49,42 +54,40 @@
 
         <div class="column">
             <div class="card">
-                <div class="container" style="min-height: 320px;">
+                <div class="container" style="min-height: 350px;">
                     <h2>Programmiersprachen / Techniken</h2>
                     <p>HTML, CSS, JavaScript</p>
                 </div>
             </div>
         </div>
     </div>
+    <br>
 
     <h2 class="slideshowtitle">Bilder</h2>
 
-    <div class="slideshow">
-        <img class="mySlides" src="imgs/quiz_modus_auswahl.png">
-        <img class="mySlides" src="imgs/quiz_kategorie.png">
-        <img class="mySlides" src="imgs/antwort-richtig.png">
-        <img class="mySlides" src="imgs/antwort-falsch.png">
-        <img class="mySlides" src="imgs/einzelspieler-ende.png">
-        <img class="mySlides" src="imgs/1vs1-punkt.png">
-        <img class="mySlides" src="imgs/ende-1vs1.png">
+    <div class="slider">
+        <div class="slide">
+          <img src="imgs/quiz_modus_auswahl.png" />
+        </div>
+        <div class="slide">
+          <img src="imgs/quiz_kategorie.png" />
+        </div>
+        <div class="slide">
+          <img src="imgs/antwort-richtig.png" />
+        </div>
+        <div class="slide">
+            <img src="imgs/antwort-falsch.png" />
+        </div>
+        <div class="slide">
+            <img src="imgs/einzelspieler-ende.png" />
+        </div>
+        <div class="slide">
+            <img src="imgs/1vs1-punkt.png" />
+        </div>
+        <div class="slide">
+            <img src="imgs/ende-1vs1.png" />
+        </div>
     </div>
-
-    <script>
-        var slideIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) { slideIndex = 1 }
-            x[slideIndex - 1].style.display = "block";
-            setTimeout(carousel, 3500);
-        }
-    </script>
 </body>
 
 </html>
